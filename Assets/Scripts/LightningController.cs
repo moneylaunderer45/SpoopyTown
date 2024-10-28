@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LightningController : MonoBehaviour
 {
-    public Light light;
+    public Light light1;
     private float delay;
 
     public float minDelay;
@@ -41,10 +41,10 @@ public class LightningController : MonoBehaviour
         canStrike = false;
         yield return new WaitForSeconds(delay);
 
-        light.enabled = true;
+        light1.enabled = true;
         yield return new WaitForSeconds(0.25f);
         audioSource.PlayOneShot(thunder);
-        light.enabled = false;
+        light1.enabled = false;
 
         canStrike = true;
     }
